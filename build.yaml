@@ -13,7 +13,6 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: splitkb_aurora_lily58_left nice_view_adapter nice_view
-  - board: nice_nano_v2
-    shield: splitkb_aurora_lily58_right nice_view_adapter nice_view
+- board: nice_nano_v2
+- shield: some_native_shield
++ shield: some_native_shield nice_vieww 
