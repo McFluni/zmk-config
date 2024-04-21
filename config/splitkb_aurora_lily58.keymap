@@ -50,21 +50,21 @@
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  tdU  |  I    |  O   |   P   |   -   |
-            // | SHIFT | tdA |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // |  CTRL |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   |  \ |  |
             //                     | GUI  | ALT  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | ALG_GR|
 
             bindings = <
 &kp ESC    &kp N1           &kp N2      &kp N3        &kp N4       &kp N5                                     &kp N6     &kp N7    &kp N8         &kp N9    &kp N0           &kp GRAVE
-&kp TAB    &kp Q            &kp W       &kp E         &kp R        &kp T                                      &kp DE_Z   &td1      &kp I          &kp O     &kp P            &kp MINUS
+&kp TAB    &kp Q            &kp W       &kp E         &kp R        &kp T                                      &kp DE_Z   &td1     &kp I          &kp O     &kp P            &kp MINUS
 &kp LSHFT  &td0             &hm LALT S  &hm LSHIFT D  &hm LCTRL F  &kp G                                      &kp H      &kp DE_J  &kp DE_K       &kp DE_L  &kp DE_O_UMLAUT  &kp RIGHT_SHIFT
 &kp LCTRL  &kp Z            &kp X       &kp C         &kp V        &kp B          &bt BT_CLR_ALL    &kp RBKT  &kp N      &kp M     &kp COMMA      &kp DOT   &kp RIGHT_ALT    &kp BACKSLASH
                                         &kp LGUI      &mo 1        &kp BACKSPACE  &kp DEL           &kp RET   &kp ENTER  &mo 2     &kp RIGHT_ALT
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_DOWN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
@@ -85,8 +85,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_DOWN C_VOL_UP>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp 0 0>;
         };
 
         raise_layer {
@@ -104,9 +104,8 @@
 &kp END    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
                            &trans   &trans   &trans   &trans    &trans  &trans       &kp DEL    &trans
             >;
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_DOWN C_VOL_UP>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
