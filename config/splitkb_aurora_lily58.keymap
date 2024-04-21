@@ -21,6 +21,13 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp A>, <&kp DE_A_UMLAUT>;
+        };
+        
     };
 
     conditional_layers {
@@ -46,7 +53,7 @@
             bindings = <
 &kp ESC    &kp N1           &kp N2      &kp N3        &kp N4       &kp N5                                     &kp N6     &kp N7    &kp N8         &kp N9    &kp N0           &kp GRAVE
 &kp TAB    &kp Q            &kp W       &kp E         &kp R        &kp T                                      &kp DE_Z   &kp U     &kp I          &kp O     &kp P            &kp MINUS
-&kp LSHFT  &kp DE_A_UMLAUT  &hm LALT S  &hm LSHIFT D  &hm LCTRL F  &kp G                                      &kp H      &kp DE_J  &kp DE_K       &kp DE_L  &kp DE_O_UMLAUT  &kp RIGHT_SHIFT
+&kp LSHFT  &td0             &hm LALT S  &hm LSHIFT D  &hm LCTRL F  &kp G                                      &kp H      &kp DE_J  &kp DE_K       &kp DE_L  &kp DE_O_UMLAUT  &kp RIGHT_SHIFT
 &kp LCTRL  &kp Z            &kp X       &kp C         &kp V        &kp B          &bt BT_CLR_ALL    &kp RBKT  &kp N      &kp M     &kp COMMA      &kp DOT   &kp RIGHT_ALT    &kp BACKSLASH
                                         &kp LGUI      &mo 1        &kp BACKSPACE  &kp DEL           &kp RET   &kp ENTER  &mo 2     &kp RIGHT_ALT
             >;
