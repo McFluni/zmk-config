@@ -13,12 +13,6 @@
 / {
     behaviors {
 
-       r_encoder : r_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
-        };
-
 
         hm: homerow_mods {
             ////////////////////////////////////////////////////////////////////
@@ -78,8 +72,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&r_encoder>;
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP,
+                <&inc_dec_kp 0 0>;
         };
 
         lower_layer {
