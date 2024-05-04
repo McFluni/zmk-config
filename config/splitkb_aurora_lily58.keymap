@@ -26,7 +26,7 @@
             td1: tap_dance_1 {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <180>;
+                tapping-term-ms = <200>;
                 bindings = <&kp U>, <&kp DE_U_UMLAUT>;
             };
 
@@ -73,7 +73,6 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         lower_layer {
