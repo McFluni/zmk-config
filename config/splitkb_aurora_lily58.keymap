@@ -12,6 +12,13 @@
 
 / {
     behaviors {
+
+&sensors {
+    triggers-per-rotation = <18>;
+    tap-ms = <20>;
+};
+
+
         hm: homerow_mods {
             ////////////////////////////////////////////////////////////////////
 
