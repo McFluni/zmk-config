@@ -20,24 +20,25 @@
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-////////////////////////////////////////////////////////////////////
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp A>, <&kp DE_A_UMLAUT>;
-        };
 
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp U>, <&kp DE_U_UMLAUT>;
-        };
-////////////////////////////////////////////////////////////////////////////
-        };
+            ////////////////////////////////////////////////////////////////////
 
+            td0: tap_dance_0 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <180>;
+                bindings = <&kp A>, <&kp DE_A_UMLAUT>;
+            };
 
+            td1: tap_dance_1 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <180>;
+                bindings = <&kp U>, <&kp DE_U_UMLAUT>;
+            };
+
+            ////////////////////////////////////////////////////////////////////////////
+        };
     };
 
     conditional_layers {
@@ -52,8 +53,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-
-
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
@@ -66,7 +65,7 @@
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                                 &kp N6     &kp N7    &kp N8         &kp N9    &kp N0           &kp GRAVE
 &kp TAB    &kp Q   &kp W   &kp E     &kp R   &kp T                                  &kp DE_Z   &td1      &kp I          &kp O     &kp P            &kp MINUS
 &kp LSHFT  &td0    &kp S   &kp D     &kp F   &kp G                                  &kp H      &kp DE_J  &kp DE_K       &kp DE_L  &kp DE_O_UMLAUT  &kp RIGHT_SHIFT
-&kp LCTRL  &kp Z   &kp X   &kp C     &kp V   &kp B          &kp K_MUTE    &kp HASH  &kp N      &kp M     &kp COMMA      &kp DOT   &kp RIGHT_ALT    &kp RCTRL
+&kp LCTRL  &kp Z   &kp X   &kp C     &kp V   &kp B          &kp K_MUTE    &kp HASH  &kp N      &kp M     &kp COMMA      &kp DOT   &kp MINUS        &kp RCTRL
                            &kp LGUI  &mo 1   &kp BACKSPACE  &kp DEL       &kp RET   &kp SPACE  &mo 2     &kp RIGHT_ALT
             >;
 
