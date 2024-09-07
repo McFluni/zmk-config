@@ -25,7 +25,7 @@
             td1: td_U_Umlaut {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <160>;
+                tapping-term-ms = <165>;
                 bindings = <&kp U>, <&kp DE_U_UMLAUT>;
             };
 
