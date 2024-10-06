@@ -29,7 +29,7 @@
                 bindings = <&kp U>, <&kp DE_U_UMLAUT>;
             };
 
-                td2: td_ESC_Caret {
+            td2: td_ESC_Caret {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <180>;
@@ -62,11 +62,11 @@
             //                     | GUI  | ALT  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | ALG_GR|
 
             bindings = <
-&td2       &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                                    &kp N6     &kp N7    &kp N8         &kp N9    &kp N0           &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E     &kp R   &kp T                                     &kp DE_Z   &td1      &kp I          &kp O     &kp P            &kp DE_TILDE
-&kp LSHFT  &td0    &kp S   &kp D     &kp F   &kp G                                     &kp H      &kp DE_J  &kp DE_K       &kp DE_L  &kp DE_O_UMLAUT  &kp RIGHT_SHIFT
-&kp LCTRL  &kp Z   &kp X   &kp C     &kp V   &kp B          &kp DE_HASH    &kp C_MUTE  &kp N      &kp M     &kp COMMA      &kp DOT   &kp DE_MINUS     &kp RCTRL
-                           &kp LGUI  &mo 1   &kp BACKSPACE  &kp DEL        &kp RET     &kp SPACE  &mo 2     &kp RIGHT_ALT
+&td2       &kp N1    &kp N2  &kp N3    &kp N4  &kp N5                                    &kp N6     &kp N7    &kp N8         &kp N9    &kp N0           &kp MINUS
+&kp TAB    &kp Q     &kp W   &kp E     &kp R   &kp T                                     &kp DE_Z   &td1      &kp I          &kp O     &kp P            &kp DE_TILDE
+&kp LSHFT  &td0      &kp S   &kp D     &kp F   &kp G                                     &kp H      &kp DE_J  &kp DE_K       &kp DE_L  &kp DE_O_UMLAUT  &kp RIGHT_SHIFT
+&kp LCTRL  &kp DE_Y  &kp X   &kp C     &kp V   &kp B          &kp DE_HASH    &kp C_MUTE  &kp N      &kp M     &kp COMMA      &kp DOT   &kp DE_MINUS     &kp RCTRL
+                             &kp LGUI  &mo 1   &kp BACKSPACE  &kp DEL        &kp RET     &kp SPACE  &mo 2     &kp RIGHT_ALT
             >;
 
             sensor-bindings =
@@ -104,11 +104,11 @@
             //                     |      |      |      |        |  |       |      |   DEL |       |
 
             bindings = <
-&kp PG_UP  &trans  &trans          &trans          &trans     &trans                             &trans       &trans     &trans     &trans     &trans    &trans
-&kp PG_DN  &kp N1  &kp N2          &kp UP          &kp N4     &kp N5                             &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &trans
-&kp HOME   &kp F2  &kp LEFT_ARROW  &kp F4          &kp RIGHT  &kp F6                             &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-&kp END    &kp F8  &kp F9          &kp DOWN_ARROW  &kp F11    &kp F12  &bt BT_NXT    &bt BT_CLR  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
-                                   &trans          &trans     &trans   &trans        &trans      &trans       &kp DEL    &trans
+&kp DE_DEGREE  &trans  &trans          &trans                   &trans                    &trans                                  &trans       &trans     &trans     &trans     &trans    &trans
+&kp PG_DN      &kp N1  &kp N2          &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_GRAVE                            &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &trans
+&kp HOME       &kp F2  &kp LEFT_ARROW  &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &kp F6                                  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
+&kp END        &kp F8  &kp F9          &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp F12       &bt BT_NXT    &bt BT_CLR  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
+                                       &trans                   &trans                    &trans        &trans        &trans      &trans       &kp DEL    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
