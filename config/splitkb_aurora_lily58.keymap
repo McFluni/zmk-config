@@ -69,10 +69,13 @@
                              &kp LGUI  &mo 1   &kp BACKSPACE  &kp DEL        &kp RET     &kp SPACE  &mo 2     &kp RIGHT_ALT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp PAGE_DOWN PAGE_UP>,
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
-        };
+
+sensor-bindings = <&msc scrl_down scrl_up>,  <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+          /*  sensor-bindings =
+            *    <&inc_dec_kp PAGE_DOWN PAGE_UP>,
+             *   <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+        */
+};
 
         lower_layer {
             // ------------------------------------------------------------------------------------------------------------
