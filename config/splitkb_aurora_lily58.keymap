@@ -38,11 +38,7 @@
                 bindings = <&kp ESC>, <&kp DE_CARET>;
             };
 
-            rot_kp: sensor_rotate_kp {
-                compatible = "zmk,behavior-sensor-rotate-var";
-                #sensor-binding-cells = <2>;
-                sensor-bindings = <&msc>, <&msc>;
-            };
+    
 
             ////////////////////////////////////////////////////////////////////////////
 
