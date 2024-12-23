@@ -19,14 +19,14 @@
             td0: td_A_Umlaut {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <140>;
+                tapping-term-ms = <167>;
                 bindings = <&kp A>, <&kp DE_A_UMLAUT>;
             };
 
             td1: td_U_Umlaut {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <120>;
+                tapping-term-ms = <160>;
                 bindings = <&kp U>, <&kp DE_U_UMLAUT>;
             };
 
